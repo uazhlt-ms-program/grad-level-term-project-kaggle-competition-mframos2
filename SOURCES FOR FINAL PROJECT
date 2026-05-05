@@ -1,0 +1,24 @@
+Most of the code is the code I created and used in previous homeworks. 
+
+The only parts of my code that used AI were the print statements to debug while I was working. Here are the parts of the code which were AI generated:
+
+
+Cell # 7
+#Debugging
+print(f"Training set size: {len(train_texts)}")
+print(f"Development set size: {len(dev_texts)}")
+print(f"\nTraining label distribution:")
+print(train_labels.value_counts().sort_index())
+print(f"\nDevelopment label distribution:")
+print(dev_labels.value_counts().sort_index())
+
+Cell # 11
+
+accuracy = accuracy_score(dev_labels_encoded, dev_predictions)
+f1 = f1_score(dev_labels_encoded, dev_predictions, average="weighted")
+
+print(f"\n📊 Development Set Results:")
+print(f"Accuracy: {accuracy:.4f}")
+print(f"F1 Score (weighted): {f1:.4f}")
+print("\nClassification Report:")
+print(classification_report(dev_labels_encoded, dev_predictions))
